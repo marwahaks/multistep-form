@@ -15,6 +15,7 @@ class ChooseIngredients extends Component{
 const base64data = usernamePasswordBuffer.toString('base64');
         var axios = require('axios').default;
         var eee = externals.url + '/products.json';
+        let kam = null;
 
         var url= "https://" + externals.api_key + ":" + externals.api_secret + "@smrtesting.myshopify.com/admin/api/2021-01/products.json"
 var graphli = "https://smrtesting.myshopify.com/api/2021-01/graphql.json";
@@ -23,28 +24,28 @@ var graphli = "https://smrtesting.myshopify.com/api/2021-01/graphql.json";
 var efs = await axios.post(graphli,'{shop{name}}', {headers:{"X-Shopify-Storefront-Access-Token": "996b365bcde196105a693bd997e86cf1", "Accept":"application/json", "Content-Type": "application/graphql"}});
         var dsdsd = await axios.get(url).then(response =>{
             console.log('ASASASASA' + response.data);
-            eee =response;
+            kam =response;
             return response;
           }).catch(function(error) {
             console.log('EEEEEEE' + error);
-          });
+          }); 
 
 
 
         
-const axiosObject = axios.create({
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Basic ${base64data}`,
-    }
-});
-    var eerererefff = axiosObject.get(eee).then(response =>{
-        console.log('Authenticatedsss' + response.data);
-        eee =response;
-        return response;
-      }).catch(function(error) {
-        console.log('Errorssss on Authentication' + error);
-      });
+// const axiosObject = axios.create({
+//     headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': `Basic ${base64data}`,
+//     }
+// });
+//     var eerererefff = axiosObject.get(eee).then(response =>{
+//         console.log('Authenticatedsss' + response.data);
+//         eee =response;
+//         return response;
+//       }).catch(function(error) {
+//         console.log('Errorssss on Authentication' + error);
+//       });
 
         
         // var usdsdsd =externals.api_key;

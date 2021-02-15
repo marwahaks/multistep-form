@@ -30,8 +30,8 @@ class ProductType extends Component{
         <Form color='blue' >
             <h1 className="ui centered">Select Ordering Style</h1>
             <div className='block'>
-            <Button id='sub' bubbles='true' value='subscription' onClick={this.props.handleChange('productType')}>Subscripton</Button>
-            <Button id='sin' value='single' onClick={this.props.handleChange('productType')}>Single Receipe</Button>
+            <Button id='sub' bubbles='true' value='subscription' onClick={this.props.handleChange('productType')}>Sub</Button>
+            <Button id='sin' value='single' onClick={this.props.handleChange('productType')}>Single </Button>
             </div>
             <Button onClick={this.back}>Back</Button>
             <Button onClick={this.saveAndContinue}>Save And Continue </Button>
